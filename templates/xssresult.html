@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Vulnerability Results</title>
+</head>
+<body>
+    <h1>XSS Vulnerability Results</h1>
+
+    {% if results %}
+        <p>XSS detected with the following payloads:</p>
+        <ul>
+            {% for result in results %}
+                <li>
+                    <strong>Payload:</strong> {{ result}} <br>
+                    <!-- <strong>Method:</strong> {{ result.method }} -->
+                </li>
+                <br>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No XSS vulnerabilities detected.</p>
+    {% endif %}
+</body>
+</html>

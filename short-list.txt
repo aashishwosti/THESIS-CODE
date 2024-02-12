@@ -1,0 +1,5 @@
+<img src="invalid" onerror="alert('XSS')">
+<script>alert('XSS')</script>
+<img src="invalid" onerror="alert('XSS')>
+<iframe src="javascript:alert(\'XSS\')">
+<a href="javascript:alert(\'XSS\')">Click here</a>

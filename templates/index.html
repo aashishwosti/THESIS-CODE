@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Security Scanner</h1>
+        </div>
+        <form action="/scan" method="post" class="content">
+            <label for="url">Enter URL:</label>
+            <input type="text" id="url" name="url" required>
+            <br>
+            <label for="scan_type">Select Scan Type:</label>
+            <select id="scan_type" name="scan_type">
+                <option value="XSS">XSS Scan</option>
+                <option value="SQLi">SQLi Scan</option>
+                <option value="DirectoryTraversal">Directory Traversal Scan</option>
+                <option value="FullScan">Full Scan</option>
+            </select>
+            <br>
+            <button type="submit">Scan</button>
+        </form>
+    </div>
+</body>
+</html>
+
